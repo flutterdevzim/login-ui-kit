@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_ui_kit/login.dart';
 
 class Register extends StatefulWidget {
   @override
@@ -46,77 +47,113 @@ class _RegisterState extends State<Register> {
               ),
             ),
           ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Center(
+                child: Container(
+                  height: 90,
+                  width: 250,
+                  decoration: BoxDecoration(
+                    color: Color(0xff978AA9).withOpacity(0.7),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Text(
+                          'Email Address',
+                          style: TextStyle(
+                              fontFamily: 'Poppins',
+                              fontSize: 15,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.white),
+                        ),
+                        TextField(
+                          keyboardType: TextInputType.emailAddress,
+                          textAlign: TextAlign.start,
+                          onChanged: (value) {
+                            email = value;
+                          },
+                          decoration: InputDecoration(
+                            hintText: 'Your Email',
+                            hintStyle: TextStyle(
+                                fontFamily: 'Poppins',
+                                fontSize: 15,
+                                fontWeight: FontWeight.w400,
+                                color: Colors.white),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              Center(
+                child: Container(
+                  height: 90,
+                  width: 250,
+                  decoration: BoxDecoration(
+                    color: Color(0xff978AA9).withOpacity(0.7),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Text(
+                          'Password',
+                          style: TextStyle(
+                              fontFamily: 'Poppins',
+                              fontSize: 15,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.white),
+                        ),
+                        TextField(
+                          cursorColor: Colors.white.withOpacity(0.8),
+                          obscureText: true,
+                          textAlign: TextAlign.start,
+                          onChanged: (value) {
+                            email = value;
+                          },
+                          decoration: InputDecoration(
+                            hintText: 'Your Password',
+                            hintStyle: TextStyle(
+                                fontFamily: 'Poppins',
+                                fontSize: 15,
+                                fontWeight: FontWeight.w400,
+                                color: Colors.white),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
           Positioned(
-            top: 200,
-            left: 50,
-            child: Column(
-              children: <Widget>[
-                Container(
-                  height: 70,
-                  width: 250,
-                  decoration: BoxDecoration(
-                    color: Color(0xff978AA9).withOpacity(0.5),
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: Row(
-                    children: <Widget>[
-                      Icon(
-                        Icons.mail_outline,
-                        color: Colors.white,
-                      ),
-                      SizedBox(
-                        width: 30,
-                      ),
-                      Column(
-                        children: <Widget>[
-                          Text(
-                            'Email Address',
-                            style: TextStyle(
-                                fontFamily: 'Poppins',
-                                fontSize: 15,
-                                fontWeight: FontWeight.w400,
-                                color: Colors.white),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-                SizedBox(
-                  height: 40,
-                ),
-                Container(
-                  height: 70,
-                  width: 250,
-                  decoration: BoxDecoration(
-                    color: Color(0xff978AA9).withOpacity(0.5),
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: Row(
-                    children: <Widget>[
-                      Icon(
-                        Icons.lock_outline,
-                        color: Colors.white,
-                      ),
-                      SizedBox(
-                        width: 30,
-                      ),
-                      Column(
-                        children: <Widget>[
-                          Text(
-                            'Password',
-                            style: TextStyle(
-                                fontFamily: 'Poppins',
-                                fontSize: 15,
-                                fontWeight: FontWeight.w400,
-                                color: Colors.white),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                )
-              ],
+            top: 470,
+            left: 93,
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => Login()));
+              },
+              child: Text(
+                'Log into your account',
+                style: TextStyle(
+                    fontFamily: 'Poppins',
+                    fontSize: 15,
+                    fontWeight: FontWeight.w400,
+                    color: Colors.white),
+              ),
             ),
           ),
           Align(
