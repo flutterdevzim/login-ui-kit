@@ -1,6 +1,10 @@
-# login_ui_kit
+# Login UI Kit
 
 A Login UI Kit to reduce the amount of time it takes to make a login flow.
+
+Login Screen | Sign Up Screen 
+------------ | -------------|
+![Onboarding1](https://user-images.githubusercontent.com/22801227/76141998-f66b0080-6071-11ea-9e5b-23d319936737.jpg) | ![Onboarding1](https://user-images.githubusercontent.com/22801227/76142017-2ca88000-6072-11ea-8651-c23558dd5dea.jpg)
 
 ## Getting Started
 
